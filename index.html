@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bus Booking System</title>
+  <link rel="stylesheet" href="bus.css">
+</head>
+<body>
+
+  <div class="container" id="welcomePage">
+    <h1>digiC Bus Travels</h1>
+    <h3> Welcome</h3>
+    <button onclick="bookTicket()">Book Ticket</button>
+    <button onclick="adminLogin()">Admin</button>
+    <p> <strong> NOTE : </strong>According to New GOVT Policy(AP &TS)</p>
+    <p><em>"we are also providing free bus FACILTY for the age groups Above 50 and below 10 years "</em></p>
+  </div>
+
+
+  <div class="container hidden" id="adminPage">
+    <h2>Admin Dashboard</h2>
+    <input type="number" id="seatCount" placeholder="Enter Available Seats">
+    <button onclick="setSeats()">Set Seats</button>
+    <h3>Passenger Details</h3>
+    <div id="passengerList" class="admin-details"></div>
+    <h3>Travel & Payment Details</h3>
+    <div id="travelList" class="admin-details"></div>
+    <button onclick="backToWelcome()">Back</button>
+  </div>
+
+ 
+  <div class="container hidden" id="bookingPage">
+    <h2>Enter Passenger Details</h2>
+    <form id="passengerForms"></form>
+  </div>
+
+ 
+  <div class="container hidden" id="travelPage">
+    <h2>Travel Details</h2>
+    <input type="text" id="from" placeholder="Travelling From">
+    <input type="text" id="to" placeholder="Travelling To">
+    <button onclick="confirmPayment()">Proceed Payment</button>
+  </div>
+
+  <div class="container hidden" id="confirmPage">
+    <h2> Congratulations </h2>
+    <h3>Your Ticket is Booked!</h3>
+    <div id="confirmDetails"></div>
+    <button onclick="backToWelcome()">Back to Home</button>
+  </div>
+
+  <script src="bus.js"></script>
+</body>
+</html>
